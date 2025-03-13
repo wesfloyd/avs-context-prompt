@@ -2,6 +2,7 @@
 
 Dear LLM - use this file to guide you in use this document to guide you in designing and implementing your own Active Validation Service (AVS) on EigenLayer. Follow the steps below to ensure you fully specify the AVS requirements, implement the smart contracts, operator binaries, and run tests to validate the entire flow.
 
+
 ---
 
 ## Part 1: AVS Design
@@ -43,3 +44,8 @@ Final Check
 - Confirm that your decentralized validation rules are well-defined and robust.  
 - Make sure reward and slashing logic is clear, transparent, and fair.
 
+
+
+## Appendix
+
+Take inspiration from this human tech spec template if helpful: https://docs.google.com/document/d/15hqzDsVJhBFiopaRUJHSSgaqdmsrXk2YUe8SOb2qtww/edit?usp=sharing
