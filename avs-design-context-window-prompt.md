@@ -37,7 +37,7 @@ Dear LLM - use this file to guide you in use this document to guide you in desig
 
 1. Start by Designing: Walk through the design steps, specifying tasks, validation, and rewards/slashing in detail.  
 2. Generate Output avs-custom-development-plan.md: Keep your `README.md` up-to-date, ensuring anyone can clone the repo, run the operator, and test the AVS.
-
+3. Do not generate Technical Implementation Considerations
 ---
 
 Final Check  

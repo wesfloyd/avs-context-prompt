@@ -17,11 +17,20 @@ Likely this flow will become more relevant as [agents become more involved](http
 
 ## End to End Flow
 
-Step 1) Idea: User defines their AVS goals or design at a high level (minimal prompt). eg "I want to build an AVS where an Operator generates cat images via LLM inference and their work is validated using a separate set of LLMs to measure their accuracy".
+Step 1) Idea: User defines their AVS goals or design at a high level (minimal prompt). 
+Example prompt:
+```
+Generate an EigenLayer AVS design file named avs-design-formyidea.md.
+Use the attached avs-design-context-window-prompt.md for guidance.
+Work: Design an AVS where a single Operator generates cat images via LLM inference.
+Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%. 
+Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%
+Slashing: slash the generating Operator if their average validator accuracy was less than 20%
+```
 
 Step 2) Design: User sends their prompt and the standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md) to the LLM. This results in a detailed avs-custom-development-plan.md customized for their AVS.
 
-Step 3) Implementation: User feeds their avs-custom-development-plan.md file to Claude Code or Cursor along with the standard [avs-coding-context-window-prompt.md](./avs-coding-context-window-prompt.md) for implementation to a codebase including deployment code.
+Step 3) Implementation: User feeds their avs-design-formyidea.md file to Claude Code or Cursor along with the standard [avs-coding-context-window-prompt.md](./avs-coding-context-window-prompt.md) for implementation to a codebase including deployment code.
 
 Step 4) Deployment [todo]
 
