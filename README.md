@@ -2,9 +2,11 @@
 
 ## Motivation
 
-“How can we modify our new developer tooling to support llm generation of AVS code as a first class citizen?”   
-
-.. and thankfully [The Andrej has spoken](https://x.com/karpathy/status/1899876370492383450)  
+1) “How can we modify our new developer tooling to support llm generation of AVS code as a first class citizen?”   
+2) "How can we build our tooling so that a non-technical person can launch a working AVS prototype?"
+  
+  
+[The Andrej has spoken](https://x.com/karpathy/status/1899876370492383450)  
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/afa768ad-67bb-4279-96fe-c5771b996e8f" />
   
