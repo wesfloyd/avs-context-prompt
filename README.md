@@ -27,15 +27,14 @@ This flow will become more relevant as [agents become more involved](https://x.c
 
 **Step 1)** Idea to Design: 
 User defines their AVS goals or design at a high level (minimal prompt). 
-Example prompt:
-```
-Generate an EigenLayer AVS design file named avs-design-formyidea.md.
-Use the attached avs-design-context-window-prompt.md for guidance.
-Operator Work: Design an AVS where a single Operator **generates cat images** via LLM inference.
-Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%. 
-Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%
-Slashing: slash the generating Operator if their average validator accuracy was less than 20%
-```
+Example design prompt:
+  _Generate an EigenLayer AVS design file named avs-design-formyidea.md.
+  Operator Work: Design an AVS where a single Operator **generates cat images** via LLM inference.
+  Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%. 
+  Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%
+  Slashing: slash the generating Operator if their average validator accuracy was less than 20%
+  Use the attached avs-design-context-window-prompt.md for guidance._
+
 
 **Step 2)** Design to Development Plan: 
 User sends their prompt and the standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md) to the LLM. This results in a detailed avs-custom-development-plan.md customized for their AVS.
