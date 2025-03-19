@@ -1,4 +1,4 @@
-# Idea to AVS Prototype Pipeline
+# EigenLayer AVS Idea to Prototype Pipeline
 via "EigenLayer AVS Context Window Prompts for LLMs"  
 
 
@@ -12,10 +12,7 @@ The outputs from this pipeline do not need to generate Mainnet ready code. They 
 
 ## Background
   
-[The Andrej has spoken](https://x.com/karpathy/status/1899876370492383450)  
-
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/afa768ad-67bb-4279-96fe-c5771b996e8f" />
-  
+[The Andrej has spoken](https://x.com/karpathy/status/1899876370492383450)  "*In 2025 the docs should be a single your_project.md text file that is intended to go into the context window of an LLM.*"
 
 The [Vibecoding stack](https://x.com/DennisonBertram/status/1899641887922725223) is the preferred mode for modern developers.
   
@@ -29,21 +26,17 @@ This flow will become more relevant as [agents become more involved](https://x.c
 User interacts with LLM to determine whether their 
 
 **Step 1)** AVS Idea to Design: 
-User defines their AVS goals or design at a high level (minimal prompt).   
+User defines their AVS goals or design at a high level in a minimal custom prompt for the llm ([example here](examples/avs-design-prompt-figs.md)).
 
-  _Example design prompt:_  
-  _Generate an EigenLayer AVS design file named avs-design-formyidea.md.  
-  Operator Work: Design an AVS where a single Operator **generates cat images** via LLM inference.  
-  Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%.   
-  Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%  
-  Slashing: slash the generating Operator if their average validator accuracy was less than 20%  
-  Use the attached avs-design-context-window-prompt.md for guidance._
+User sends their custom prompt to the LLM along with:
+- The standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md)
+- [Repomix](https://repomix.com/) compressed copies of EigenLayer docs and contracts. _in the near future, MCP server endpoints_ will replace these.   
 
-User sends their prompt to the LLM along with the standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md) (_or in the near future, MCP server endpoints_). This results in a detailed `avs-design-formyidea.md` customized for their AVS.
+This results in a detailed `avs-design-output-formyidea.md` customized for their AVS.
 
 
 **Step 3)** ASV Design to Prototype:
-User feeds their `avs-design-formyidea.md` file to a coding-centric llm (Claude Code or Cursor) along with an interchangeable set of standard context window files (_or in the near future, MCP server endpoints_) such as:
+User feeds their `avs-design-output-formyidea.md` file to a coding-centric llm (Claude Code or Cursor) along with an interchangeable set of standard context window files (_or in the near future, MCP server endpoints_) such as:
 - [avs-**default**-coding-context-window-prompt.md](./avs-coding-context-window-prompt.md) for standard hello world AVS implementation to a codebase including deployment code.
 - `avs-othentic-coding-context-window-prompt.md` to generate code that could be ran on [Othentic](https://docs.othentic.xyz/main).
 - `avs-wavs-coding-context-window-prompt.md` to generate code that could be ran on [WAVS](https://www.wavs.xyz/)
@@ -57,11 +50,9 @@ User feeds their `avs-design-formyidea.md` file to a coding-centric llm (Claude 
 [todo determine how to leverage an llm for this]
 
 
-Future enhancements:
+## Future Enhancements:
+- Add architecture diagram generation to design stage.
 - Design stage can be modified to product a "level of effort" to be used for high level planning of developer cost and timelines to implement their AVS idea.
+- Refine Ideation step to prompt the user with suggestion and feedback loops.
 - Moving from Context Window files to MCP server endpoints for enhanced LLM outputs.
 
-
-Todos:
-- Refine Ideation step to prompt the user with suggestion and feedback loops.
-- Split the Design asset into a high level design and lower level design. Add to lower level design the specific organization of tasks to Operators (single, multiple, round robin, w/ vs w/out aggregator). Add architecture diagram generation.

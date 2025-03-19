@@ -35,9 +35,10 @@ Dear LLM - use this file to guide you in use this document to guide you in desig
 
 ## Usage
 
-1. Start by Designing: Walk through the design steps, specifying tasks, validation, and rewards/slashing in detail.  
-2. Generate Output avs-custom-development-plan.md: Keep your `README.md` up-to-date, ensuring anyone can clone the repo, run the operator, and test the AVS.
-3. Do not generate Technical Implementation Considerations
+- Start by Designing: Walk through the design steps, specifying tasks, validation, and rewards/slashing in detail.  
+- Generate Output avs-custom-development-plan.md: Keep your `README.md` up-to-date, ensuring anyone can clone the repo, run the operator, and test the AVS.
+- Do not generate Technical Implementation Considerations
+- Generate a simple friendly logo image that represents the AVS idea.
 ---
 
 Final Check  
@@ -48,4 +49,5 @@ Final Check
 
 ## Appendix
 
-Take inspiration from this human tech spec template if helpful: https://docs.google.com/document/d/15hqzDsVJhBFiopaRUJHSSgaqdmsrXk2YUe8SOb2qtww/edit?usp=sharing
+Take inspiration from this human tech spec template if helpful:
+https://docs.google.com/document/d/15hqzDsVJhBFiopaRUJHSSgaqdmsrXk2YUe8SOb2qtww/edit?usp=sharing
