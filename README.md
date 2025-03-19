@@ -1,4 +1,4 @@
-# Idea to AVS Pipeline
+# Idea to AVS Prototype Pipeline
 via "EigenLayer AVS Context Window Prompts for LLMs"  
 
 
@@ -25,33 +25,42 @@ This flow will become more relevant as [agents become more involved](https://x.c
 
 ## End to End Flow
 
-**Step 1)** Idea to Design: 
-User defines their AVS goals or design at a high level (minimal prompt). 
-Example design prompt:
-  _Generate an EigenLayer AVS design file named avs-design-formyidea.md.
-  Operator Work: Design an AVS where a single Operator **generates cat images** via LLM inference.
-  Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%. 
-  Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%
-  Slashing: slash the generating Operator if their average validator accuracy was less than 20%
+**Step 1)** AVS Idea Refinement:
+User interacts with LLM to determine whether their 
+
+**Step 1)** AVS Idea to Design: 
+User defines their AVS goals or design at a high level (minimal prompt).   
+
+  _Example design prompt:_  
+  _Generate an EigenLayer AVS design file named avs-design-formyidea.md.  
+  Operator Work: Design an AVS where a single Operator **generates cat images** via LLM inference.  
+  Validation: The work is validated using at least two other operators set of LLMs to measure their accuracy. The validating operators should assign a percentage "accuracy rating" between 0% and 100%.   
+  Rewards: validating operators get rewarded if they respond with any accuracy rating. Mark the Operator that generated the original image for a reward if the aversage validator accuracy was greater than 90%  
+  Slashing: slash the generating Operator if their average validator accuracy was less than 20%  
   Use the attached avs-design-context-window-prompt.md for guidance._
 
+User sends their prompt to the LLM along with the standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md) (_or in the near future, MCP server endpoints_). This results in a detailed `avs-design-formyidea.md` customized for their AVS.
 
-**Step 2)** Design to Development Plan: 
-User sends their prompt and the standard [avs-design-context-window-prompt.md](./avs-design-context-window-prompt.md) to the LLM. This results in a detailed avs-custom-development-plan.md customized for their AVS.
 
-**Step 3)** Implementation: 
-User feeds their avs-design-formyidea.md file to a coding-centric llm (Claude Code or Cursor) along with an interchangeable set of standard context window files such as:
+**Step 3)** ASV Design to Prototype:
+User feeds their `avs-design-formyidea.md` file to a coding-centric llm (Claude Code or Cursor) along with an interchangeable set of standard context window files (_or in the near future, MCP server endpoints_) such as:
 - [avs-**default**-coding-context-window-prompt.md](./avs-coding-context-window-prompt.md) for standard hello world AVS implementation to a codebase including deployment code.
 - `avs-othentic-coding-context-window-prompt.md` to generate code that could be ran on [Othentic](https://docs.othentic.xyz/main).
 - `avs-wavs-coding-context-window-prompt.md` to generate code that could be ran on [WAVS](https://www.wavs.xyz/)
-  
+
+**Result:** User gets a functional, working AVS prototype they can deploy to devnet or testnet.
+
 **Step 4)** Deployment:
 [todo determine how to leverage llms to simplify the contract deployment script generation w/forge]
 
 **Step 5)** Testing:
 [todo determine how to leverage an llm for this]
 
-**Result:** User gets a functional, working AVS prototype they can deploy to devnet or testnet.
+
+Future enhancements:
+- Design stage can be modified to product a "level of effort" to be used for high level planning of developer cost and timelines to implement their AVS idea.
+- Moving from Context Window files to MCP server endpoints for enhanced LLM outputs.
+
 
 Todos:
 - Refine Ideation step to prompt the user with suggestion and feedback loops.
