@@ -1,5 +1,4 @@
 
-<img width="395" alt="avs-vibe-development-guide" src="https://github.com/user-attachments/assets/2edb1859-3df4-4197-b9c7-cae299a653e7" />
 
 # EigenLayer AVS Idea to Prototype Pipeline
 *via "EigenLayer AVS Context Window Prompts for LLMs"*
